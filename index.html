@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Apresentação Servidor SQL/ERP</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00d8ff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #1e2a38;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #293845;
+        }
+        ul {
+            background: #1e2a38;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .carousel {
+            max-width: 600px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #00d8ff;
+            border-radius: 10px;
+        }
+        .carousel-images {
+            display: flex;
+            animation: slide 12s infinite;
+            width: 400%;
+        }
+        .carousel-images img {
+            width: 100%;
+            height: auto;
+        }
+        @keyframes slide {
+            0%   { transform: translateX(0%); }
+            25%  { transform: translateX(-100%); }
+            50%  { transform: translateX(-200%); }
+            75%  { transform: translateX(-300%); }
+            100% { transform: translateX(0%); }
+        }
+
+        .buttons {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .buttons button {
+            background-color: #00d8ff;
+            border: none;
+            color: #000;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0,216,255,0.5);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .buttons button:hover {
+            background-color: #00bcd4;
+            transform: scale(1.05);
+        }
+        
+        .component-viewer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+    </style>
+    <script>
+        const components = {
+            'AMD_Ryzen_9_5900X.png': 'Processador com 12 núcleos e 24 threads, ideal para servidores SQL/ERP com cargas paralelas.',
+            'Placa-mãe-ASUS-Prime-X570-P.png': 'Placa-mãe confiável com bom suporte a componentes de alto desempenho e resfriamento.',
+            'Memória-RAM.png': '64GB de RAM garante multitarefa intensa e resposta rápida a múltiplas sessões ERP.',
+            'ssd.png': 'SSD NVMe de alta velocidade, essencial para a performance do banco de dados.',            
+            'fonte.png': 'Fonte com certificação 80 Plus Gold para estabilidade energética contínua.',
+            'gabinete.png': 'Gabinete com boa circulação de ar, ideal para manter o servidor refrigerado.',
+            'windserver2022.png': 'Sistema operacional robusto, com recursos avançados de segurança e controle.',
+            'SQL2022.png': 'Banco de dados robusto, confiável e altamente compatível com ERP corporativos.'
+        };
+
+        function showComponent(imgName) {
+            document.getElementById('mainImage').src = 'img/' + imgName;
+            document.getElementById('description').innerText = components[imgName];
+        }
+    </script>
+</head>
+<body>
+    
+    <p><strong>Servidor para SQL e ERP</strong></p>
+    <p><strong>Orçamento feito por:</strong></p>
+    <p><strong>Diogecson Soares</strong></p>
+    <p><strong>Beatriz Pereira</strong></p>
+    <p><strong>Fabio Santos Novais</strong></p>
+    <p><strong>Gabriel da Costa Jesus</strong></p>
+    <p><strong>Rafael Lima</strong></p>
+    
+
+    <div class="buttons">
+        <button onclick="showComponent('AMD_Ryzen_9_5900X.png')">Processador</button>
+        <button onclick="showComponent('Placa-mãe-ASUS-Prime-X570-P.png')">Placa-mãe</button>
+        <button onclick="showComponent('Memória-RAM.png')">Memória RAM</button>
+        <button onclick="showComponent('ssd.png')">SSD NVMe</button>       
+        <button onclick="showComponent('fonte.png')">Fonte</button>
+        <button onclick="showComponent('gabinete.png')">Gabinete</button>
+        <button onclick="showComponent('windserver2022.png')">Windows Server 2022</button>
+        <button onclick="showComponent('SQL2022.png')">SQL Server 2022</button>
+    </div>
+
+    <div class="component-viewer">
+        <img id="mainImage" src="img/AMD_Ryzen_9_5900X.png" alt="Componente">
+        <div class="description-box" id="description">
+            Processador com 12 núcleos e 24 threads, ideal para servidores SQL/ERP com cargas paralelas.
+        </div>
+    </div>
+
+    <table>
+        <tr><th>Componente</th><th>Modelo</th><th>Preço (R$)</th><th>Link de Compra</th></tr>
+        <tr><td>Processador</td><td>AMD Ryzen 9 5900X</td><td>2.459,00</td><td><a href="https://www.amazon.com.br/dp/B08164VTWH" target="_blank">Comprar</a></td></tr>
+        <tr><td>Placa-mãe</td><td>ASUS Prime X570-P</td><td>1.199,00</td><td><a href="https://www.pichau.com.br/placa-mae-asus-prime-x570-p" target="_blank">Comprar</a></td></tr>
+        <tr><td>Memória RAM</td><td>64GB DDR4 3200MHz</td><td>1.294,00</td><td><a href="https://www.kabum.com.br/produto/116296/memoria-corsair-vengeance-rgb-pro-64gb" target="_blank">Comprar</a></td></tr>
+        <tr><td>SSD NVMe</td><td>1TB Kingston NV2</td><td>448,41</td><td><a href="https://www.amazon.com.br/dp/B0B8T1D2TB" target="_blank">Comprar</a></td></tr>
+        <tr><td>Fonte</td><td>Corsair RM650</td><td>598,90</td><td><a href="https://www.kabum.com.br/produto/99845/fonte-corsair-rm650" target="_blank">Comprar</a></td></tr>
+        <tr><td>Gabinete</td><td>Corsair iCUE 220T</td><td>649,99</td><td><a href="https://www.kabum.com.br/produto/106379/gabinete-corsair-icue-220t" target="_blank">Comprar</a></td></tr>
+        <tr><td>Windows Server 2022</td><td>Licença</td><td>1.250,00</td><td><a href="https://www.casadaslicencas.com/produtos/licenca-windows-server-2022" target="_blank">Comprar</a></td></tr>
+        <tr><td>SQL Server 2022</td><td>Licença</td><td>1.790,00</td><td><a href="https://www.rtrti.com.br/servidor/sql-server/sql-server-2022-standard-esd" target="_blank">Comprar</a></td></tr>
+        <tr><th>Total</th><td></td><th>11.218,20</th><td></td></tr>
+    </table>
+    
+
+    <h2>Justificativa das Escolhas</h2>
+    <ul>
+        <li>Ryzen 9: desempenho multicore excelente.</li>
+        <li>RAM 64GB: multitarefa e ERP com muitos usuários.</li>
+        <li>SSD: velocidade no banco de dados.</li>
+        <li>HD: backup seguro.</li>
+        <li>Fonte Gold: estabilidade energética.</li>
+        <li>Windows Server + SQL Server: robustez e compatibilidade.</li>
+    </ul>
+</body>
+</html>
